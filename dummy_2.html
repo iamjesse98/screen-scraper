@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+ table { border-collapse: collapse; } table, th, td { border: 1px solid black; }
+    </style>
+</head>
+<body>
+
+<table cellpadding="10">
+    <thead>
+        <tr>
+            <th>NAME</th>
+            <th>VALUE</th>
+        </tr>
+    </thead>
+    <tbody id="tbd"></tbody>
+</table>
+    
+<script>
+const companies = [ 'JESSE BANK', 'PLP BANK', 'JS BANK', 'PYTHON', 'PRPL' ]
+const vals = [23.6, 24.3, 21.9, 22, 23, 22.6]
+
+const $tbd = document.querySelector('#tbd')
+
+const render = _ => {
+    const shuffle = companies.sort(Math.random)
+    const mark = shuffle.map(c => `
+                                    <tr>
+                                        <td>
+                                            <h2>${c}</h2>
+                                        </td>
+                                        <td>
+                                            <h2>Rs. ${vals[Math.floor(Math.random() * vals.length)]}</h2>
+                                        </td>
+                                    </tr>`).join('')
+    $tbd.innerHTML = mark
+}
+
+render()
+
+setInterval(_ => render(), 5000 + Math.random() * 100)
+
+</script>
+
+</body>
+</html>
