@@ -25,7 +25,7 @@ const job = (x, y, w, h) => new Promise(async (resolve, reject) => {
 })
 
 setInterval(_ => job(xi, yi, wd, ht).then(d => console.log(1, d)), 500)
-setInterval(_ => job(xi, yi + ht + pad, wd, ht).then(d => console.log(2, d)), 500)
+// setInterval(_ => job(xi, yi + ht + pad, wd, ht).then(d => console.log(2, d)), 500)
 // setInterval(_ => job(xi, yi + (2 * (ht + pad)), wd, ht).then(d => console.log(3, d)), 500)
 // setInterval(_ => job(xi, yi + (3 * (ht + pad)), wd, ht).then(d => console.log(4, d)), 500)
 // setInterval(_ => job(xi, yi + (4 * (ht + pad)), wd, ht).then(d => console.log(5, d)), 500)
