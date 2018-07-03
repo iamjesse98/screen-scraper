@@ -22,7 +22,7 @@ selectAndDo('Untitled - Notepad', _ => {
     typeString('Hello World!!!')
     keyTap('enter')
     keyTap('s', ['control'])
-    keyTap('left')
+    // keyTap('left')
     typeString('robot.txt')
     keyTap('enter')
 })
